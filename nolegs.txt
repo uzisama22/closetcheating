@@ -1,0 +1,4 @@
+game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+--Remove both ur legs
+--FE

@@ -1,0 +1,5 @@
+Use antislow
+No jump cooldown
+Use #jump-pred
+Get skinny 
+Dont use hair

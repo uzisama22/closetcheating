@@ -1,0 +1,22 @@
+Game.StarterGui:SetCore("SendNotification", {Title = "HSBC", Text = "Autoeat Activado [50 Health]", Duration = 60
+
+})
+
+while wait() do
+        pcall(function()
+            if game.Players.LocalPlayer.Character.Humanoid.Health > 50 then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
+                if game.Players.LocalPlayer.Character:FindFirstChild("[Chicken]") == nil or game.Players.LocalPlayer.Backpack:FindFirstChild("[Chicken]") == nil then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop["[Chicken] - $7"].Head.CFrame
+                    wait(0.5)
+                    fireclickdetector(game.Workspace.Ignored.Shop["[Chicken] - $7"].ClickDetector)
+                end
+                pcall(function()game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack["[Chicken]"])end)
+                pcall(function()
+                    game.Players.LocalPlayer.Character["[Chicken]"]:Activate()
+                    wait(0.1)
+                    game.Players.LocalPlayer.Character["[Chicken]"]:Deactivate()
+                end)
+            end
+        end)
+    end
